@@ -1,3 +1,6 @@
+os:
+  - linux
+  - linux-ppc64le
 sudo: false
 language: node_js
 node_js:
@@ -8,19 +11,9 @@ node_js:
   - "8"
   - "9"
 matrix:
+  exclude:
+  - os: linux-ppc64le
+    node_js: "4.0"
   include:
   - os: linux-ppc64le
-    node_js: "5"
-    script: npm install
-  - os: linux-ppc64le
-    node_js: "6"
-    script: npm install
-  - os: linux-ppc64le
-    node_js: "7"
-    script: npm install
-  - os: linux-ppc64le
-    node_js: "8"
-    script: npm install
-  - os: linux-ppc64le
-    node_js: "9"
     script: npm install
