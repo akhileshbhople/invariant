@@ -14,6 +14,3 @@ matrix:
   include:
   - os: linux-ppc64le
     script: npm install
-  exclude:
-  - os: linux-ppc64le
-    node_js: "4.0"
